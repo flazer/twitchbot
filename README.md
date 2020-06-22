@@ -74,7 +74,7 @@ the bot should join.
 Once the installation is finished, you can run it with `minicli`:
 
 ```
-cd figgebot
+cd twitchbot
 ./minicli twitch
 ```
 
