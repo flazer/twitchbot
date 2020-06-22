@@ -6,9 +6,12 @@ Find out more about [minicli](https://github.com/minicli/minicli).
 
 ### Why Twitch FAQ Bot
 
-When I stream my content on Twitch it happens a lot, that people are asking the same questions over and over again. I could not blame them, but it's kind of frustrating
+When I stream my content on Twitch it happens a lot, that people are asking the same questions over and over again. I can not blame them, but it's a kind of frustrating
 to repeat yourself over and over again. I searched for a solution in [Nightbot](https://nightbot.tv) and [Moobot](http://moo.bot/), but couldn't find any. So I wrote my own bot.
 This bot is able to parse every written chatmessage and tries to find known patterns, so that it can answer with a predefined text.
+
+### Requirements
+ - PHP >= 7.3
 
 ## Getting Started
 
@@ -22,7 +25,7 @@ composer install
 
 You'll find a configuration example in app/Config/. Just rename the file and edit it:
 ```
-cd figgebot/app/Config
+cd twitchbot/app/Config
 mv App.example.php App.php
 ```
 
@@ -54,6 +57,10 @@ return [
         'ping' => [
             'response' => 'pong!',
             'cooldown' => 5
+        ],
+        'donate' => [
+            'response' => 'Awww. Thank you. Just go to: http://paypal.me/flazer',
+            'cooldown' => 5
         ]
     ]
 
@@ -64,7 +71,7 @@ Replace `TWITCH_OAUTH_TOKEN` with the generated token and `TWITCH_USERNAME` with
 the bot should join.
 
 ## Starting
-Once the installation is finished, you can run `minicli` it with:
+Once the installation is finished, you can run it with `minicli`:
 
 ```
 cd figgebot
