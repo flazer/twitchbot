@@ -26,9 +26,9 @@ class ClientService {
         if($config->has('twitch')) {
             $this->host     = $config->twitch['host'];
             $this->port     = $config->twitch['port'];
-            $this->user     = $config->twitch['user'];
-            $this->oauth    = $config->twitch['oauth'];
-            $this->channel  = $config->twitch['channel'];
+            $this->user     = $config->twitch['twitch_user'];
+            $this->oauth    = $config->twitch['twitch_oauth'];
+            $this->channel  = $config->twitch['twitch_channel'];
         }
     }
 
